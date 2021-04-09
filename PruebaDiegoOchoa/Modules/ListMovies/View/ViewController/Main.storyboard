@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A09-LI-IK9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Movies View Controller-->
+        <scene sceneID="0au-Cb-ZwC">
+            <objects>
+                <viewController storyboardIdentifier="ListMoviesViewController" id="A09-LI-IK9" customClass="ListMoviesViewController" customModule="PruebaDiegoOchoa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zyM-dq-Nkl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxv-TJ-a8k">
+                                <rect key="frame" x="0.0" y="44" width="414" height="62.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFl-MX-DM1">
+                                        <rect key="frame" x="41.5" y="0.0" width="331" height="62.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemPinkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UFl-MX-DM1" firstAttribute="centerY" secondItem="Lxv-TJ-a8k" secondAttribute="centerY" id="Ybc-2r-FEf"/>
+                                    <constraint firstItem="UFl-MX-DM1" firstAttribute="width" secondItem="Lxv-TJ-a8k" secondAttribute="width" multiplier="0.8" id="ay6-dQ-T4Y"/>
+                                    <constraint firstItem="UFl-MX-DM1" firstAttribute="height" secondItem="Lxv-TJ-a8k" secondAttribute="height" id="laz-Pc-IMs"/>
+                                    <constraint firstItem="UFl-MX-DM1" firstAttribute="centerX" secondItem="Lxv-TJ-a8k" secondAttribute="centerX" id="qus-j8-qXf"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cDV-hd-LwB">
+                                <rect key="frame" x="0.0" y="106.5" width="414" height="833.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="a2y-xe-9df">
+                                    <size key="itemSize" width="120" height="160"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="1" minY="1" maxX="1" maxY="1"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionCell" id="7dX-ds-m9P" customClass="MovieCollectionCell" customModule="PruebaDiegoOchoa" customModuleProvider="target">
+                                        <rect key="frame" x="1" y="1" width="120" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lEs-jX-Ced">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="120" height="160"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2LN-WF-SDm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cDV-hd-LwB" firstAttribute="top" secondItem="Lxv-TJ-a8k" secondAttribute="bottom" id="Dqd-je-hoj"/>
+                            <constraint firstItem="Lxv-TJ-a8k" firstAttribute="top" secondItem="2LN-WF-SDm" secondAttribute="top" id="RWy-7P-70i"/>
+                            <constraint firstItem="Lxv-TJ-a8k" firstAttribute="centerX" secondItem="2LN-WF-SDm" secondAttribute="centerX" id="cKv-1c-6Ry"/>
+                            <constraint firstItem="cDV-hd-LwB" firstAttribute="height" secondItem="zyM-dq-Nkl" secondAttribute="height" multiplier="0.93" id="o1c-Cg-arj"/>
+                            <constraint firstItem="Lxv-TJ-a8k" firstAttribute="width" secondItem="zyM-dq-Nkl" secondAttribute="width" id="rN1-7w-Euf"/>
+                            <constraint firstItem="cDV-hd-LwB" firstAttribute="centerX" secondItem="2LN-WF-SDm" secondAttribute="centerX" id="raH-gX-4BK"/>
+                            <constraint firstItem="cDV-hd-LwB" firstAttribute="width" secondItem="zyM-dq-Nkl" secondAttribute="width" id="tMw-DR-TEM"/>
+                            <constraint firstItem="Lxv-TJ-a8k" firstAttribute="height" secondItem="zyM-dq-Nkl" secondAttribute="height" multiplier="0.07" id="uf9-C6-aWO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moviesCollectionView" destination="cDV-hd-LwB" id="3ss-CO-9cm"/>
+                        <outlet property="moviesView" destination="Lxv-TJ-a8k" id="U8J-En-adS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kye-Ce-w9u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="-37"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

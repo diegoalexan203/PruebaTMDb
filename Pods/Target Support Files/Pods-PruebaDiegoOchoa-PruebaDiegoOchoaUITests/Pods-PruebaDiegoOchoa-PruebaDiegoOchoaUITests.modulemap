@@ -1,0 +1,6 @@
+framework module Pods_PruebaDiegoOchoa_PruebaDiegoOchoaUITests {
+  umbrella header "Pods-PruebaDiegoOchoa-PruebaDiegoOchoaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
